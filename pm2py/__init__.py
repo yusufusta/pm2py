@@ -21,8 +21,10 @@ class PM2Process():
 
     def __init__(self, json_data: dict) -> None:
         self.name = json_data["name"]
-        self.pid = json_data["pid"]
-        self.pm_id = json_data["pm_id"]
+        if json_data["pid"]:
+            self.pid = json_data["pid"]
+        if json_data["pm_id"]:
+            self.pm_id = json_data["pm_id"]
         self.monit = json_data["monit"]
         self.autorestart = json_data["pm2_env"]["autorestart"]
         self.namespace = json_data["pm2_env"]["namespace"]

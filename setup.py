@@ -8,7 +8,7 @@ with open('README.md') as f:
 
 setup(
     name='pm2py',
-    version='1.0.0',
+    version='1.0.1',
     description='PM2 wrapper for Python',
     long_description=long_description,
     author='Yusuf Usta',
